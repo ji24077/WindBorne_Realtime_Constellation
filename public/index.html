@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindBorne Realtime Constellation</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WindBorne Realtime Constellation</h1>
+            <div class="controls">
+                <select id="timeRange">
+                    <option value="00">현재</option>
+                    <option value="01">1시간 전</option>
+                    <option value="03">3시간 전</option>
+                    <option value="06">6시간 전</option>
+                    <option value="12">12시간 전</option>
+                    <option value="24">24시간 전</option>
+                </select>
+            </div>
+        </header>
+        
+        <main>
+            <div id="map"></div>
+            <div id="info-panel">
+                <h2>풍선 정보</h2>
+                <div id="balloon-info">
+                    <p>풍선을 선택하면 상세 정보가 표시됩니다.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: windborne-constellation
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: WIND_BORNE_API_URL
+        value: https://a.windbornesystems.com/treasure
+      - key: WEATHER_API_URL
+        value: https://api.open-meteo.com/v1/forecast
+      - key: AIR_QUALITY_API_URL
+        value: https://api.openaq.org/v2/latest
+      - key: LOCATION_API_URL
+        value: https://nominatim.openstreetmap.org/reverse 
